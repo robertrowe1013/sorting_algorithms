@@ -13,8 +13,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *forw, *tmp;
 
-	if (*list == NULL || (*list)->next == NULL ||
-	    (*list)->next->next == NULL)
+	if (*list == NULL || (*list)->next == NULL)
 		return;
 
 	for (forw = (*list)->next; forw && forw->prev; forw = forw->next)
