@@ -7,7 +7,7 @@ void swap(deck_node_t **deck, deck_node_t *card1, deck_node_t *card2);
 int vcmp(const card_t *card1, const card_t *card2);
 /**
  * sort_deck - sorts a 52 card deck
- * @deck - deck to sort
+ * @deck: deck to sort
  *
  * Return: Always 0 (ok)
  */
@@ -21,7 +21,7 @@ void sort_deck(deck_node_t **deck)
 
 /**
  * sort_suit - sorts a 52 card deck by suit
- * @deck - deck to sort
+ * @deck: deck to sort
  */
 void sort_suit(deck_node_t **deck)
 {
@@ -41,7 +41,7 @@ void sort_suit(deck_node_t **deck)
 
 /**
  * sort_val - sorts a 52 card deck staticly by value
- * @deck - deck to sort
+ * @deck: deck to sort
  */
 void sort_val(deck_node_t **deck)
 {
@@ -87,8 +87,8 @@ void swap(deck_node_t **deck, deck_node_t *card1, deck_node_t *card2)
 
 /**
  * vcmp - compares 2 card values
- * @card1 - The first card to compare
- * @card2 - The second card to compare
+ * @card1: The first card to compare
+ * @card2: The second card to compare
  *
  * Return: 1 if less than, 0 if greater or equal to
  */
