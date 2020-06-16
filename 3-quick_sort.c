@@ -32,11 +32,14 @@ int split(int *arr, int left, int right, size_t size)
 	{
 		if (arr[i2] < pivot)
 		{
-			tmp = arr[i2];
-			arr[i2] = arr[i];
-			arr[i] = tmp;
+			if (i != i2)
+			{
+				tmp = arr[i2];
+				arr[i2] = arr[i];
+				arr[i] = tmp;
+				print_array(arr, size);
+			}
 			i++;
-			/*print_array(arr, size);*/
 		}
 	}
 	if (arr[i] != arr[right])
