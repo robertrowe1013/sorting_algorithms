@@ -11,6 +11,13 @@ void quick_sort(int *array, size_t size)
 	sort_alg(array, 0, size - 1, size);
 }
 
+/**
+  * sort_alg - recursive sorting algorithm
+  * @arr: array
+  * @left: leftmost index
+  * @right: rightmost index
+  * @size: full size of array
+  */
 void sort_alg(int *arr, int left, int right, size_t size)
 {
 	int pivot;
@@ -23,6 +30,14 @@ void sort_alg(int *arr, int left, int right, size_t size)
 	}
 }
 
+/**
+  * split - split array
+  * @arr: array
+  * @left: leftmost index
+  * @right: rightmost index
+  * @size: full array size
+  * Return: pivot index
+  */
 int split(int *arr, int left, int right, size_t size)
 {
 	int i, i2, pivot, tmp;
