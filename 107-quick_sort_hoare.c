@@ -9,6 +9,13 @@ void quick_sort_hoare(int *array, size_t size)
 	sort_alg(array, 0, size - 1, size);
 }
 
+/**
+  * sort_alg - sorting algorithm
+  * @arr: array
+  * @left: leftmost index
+  * @right: rightmost index
+  * @size: size of full array
+  */
 void sort_alg(int *arr, int left, int right, size_t size)
 {
 	int pivot;
@@ -20,6 +27,14 @@ void sort_alg(int *arr, int left, int right, size_t size)
 	sort_alg(arr, pivot, right, size);
 }
 
+/**
+  * split - pivot and split
+  * @arr: array
+  * @left: leftmost index
+  * @right:rightmost index
+  * @size: size of full index
+  * Return: pivot index
+  */
 int split(int *arr, int left, int right, size_t size)
 {
 	int i, i2, pivot, tmp;
@@ -30,8 +45,10 @@ int split(int *arr, int left, int right, size_t size)
 
 	while (1)
 	{
-		do i++; while (arr[i] < pivot);
-		do i2--; while (arr[i2] > pivot);
+		do i++;
+		while (arr[i] < pivot);
+		do i2--;
+		while (arr[i2] > pivot);
 		if (i < i2)
 		{
 			tmp = arr[i2];
